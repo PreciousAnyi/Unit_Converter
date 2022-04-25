@@ -1,6 +1,8 @@
 package com.project.unitconverter.fragments
 
+import android.os.Build
 import android.os.Bundle
+import android.text.InputType
 import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.View
@@ -17,13 +19,13 @@ import soup.neumorphism.NeumorphCardView
 
 class UnitConverterFragment : Fragment(), OnClickListener {
     private  var keyValues = SparseArray<String>()
-    private lateinit var meterEditText : EditText
+    lateinit var meterEditText : EditText
     lateinit var footTextView : TextView
     var code = StringBuilder()
-    var code2 = StringBuilder()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         //linking fragments to the views
 
@@ -39,13 +41,19 @@ class UnitConverterFragment : Fragment(), OnClickListener {
         val button0 : NeumorphButton = view.findViewById(R.id.button0)
         val button00 : NeumorphButton = view.findViewById(R.id.button00)
         val dotButton : NeumorphCardView = view.findViewById(R.id.buttonDot)
-        val clearButton : NeumorphButton = view.findViewById(R.id.clearButton)
-        val retryButton : NeumorphCardView = view.findViewById(R.id.buttonRetry)
+        val convertButton : NeumorphButton = view.findViewById(R.id.convertButton)
+        val clearButton : NeumorphCardView = view.findViewById(R.id.clear_button)
         val deleteButton : NeumorphCardView = view.findViewById(R.id.deleteButton)
 
-         meterEditText = view.findViewById(R.id.meterEditText)
+        //assigning meterEditText and footTextView
+        meterEditText = view.findViewById(R.id.meterEditText)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            meterEditText.showSoftInputOnFocus = false
+        }
+
         footTextView = view.findViewById(R.id.footTextView)
 
+        //setting onClickListners for the buttons
         button1.setOnClickListener(this)
         button2.setOnClickListener(this)
         button3.setOnClickListener(this)
@@ -58,11 +66,7 @@ class UnitConverterFragment : Fragment(), OnClickListener {
         button0.setOnClickListener(this)
         button00.setOnClickListener(this)
         dotButton.setOnClickListener(this)
-        retryButton.setOnClickListener{
-            var result = meterEditText.text?.toString()!!.toFloat() * 3.28084
-            var intResult = result.toInt()
-            footTextView.setText(intResult)
-        }
+
 
         //replacing buttons with number to display on editText when clicked
         keyValues.put(R.id.button0,"0")
@@ -78,6 +82,13 @@ class UnitConverterFragment : Fragment(), OnClickListener {
         keyValues.put(R.id.button9,"9")
 
 
+        //clear all button
+        clearButton.setOnClickListener{
+            footTextView.text = ""
+            meterEditText.text.clear()
+        }
+
+        //delete button
         deleteButton.setOnClickListener{
             var length: Int = meterEditText.text?.length ?: 0
 
@@ -90,12 +101,20 @@ class UnitConverterFragment : Fragment(), OnClickListener {
             }
 
         }
-        clearButton.setOnClickListener{
-            var result =  meterEditText.text.toString().toFloat() * 3
-            var intResult = result.toInt()
-           footTextView.setText(intResult)
-//            Toast.makeText(activity,intResult,Toast.LENGTH_LONG).show()
+
+        //convert button
+        convertButton.setOnClickListener{
+           footTextView.text = convertMeter(code.toString()).toString()
         }
+    }
+
+
+    //function to convert
+    private fun convertMeter(string: String): Double {
+        val meterValue = string.toDouble().toInt()
+        val feetValue = 3.2808399
+        return meterValue * feetValue
+
     }
 
     override fun onCreateView(
@@ -113,13 +132,8 @@ class UnitConverterFragment : Fragment(), OnClickListener {
         if (code.length <10 ){
             code.append(value)
             meterEditText.setText(code)
-            val myEditValue: String = code.toString()
-            val myEditNum = Integer.parseInt(myEditValue)
-            val result = myEditNum * 3
-            footTextView.setText(result)
-
         } else{
-            Toast.makeText(activity,"Numbers Exceed Maximum of 12 Chracters",Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Numbers Exceed Maximum of 10 Characters",Toast.LENGTH_SHORT).show()
         }
 
     }
