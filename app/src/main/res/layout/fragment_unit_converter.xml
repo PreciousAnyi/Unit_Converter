@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UnitConverterFragment"
+    android:background="@color/black2">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/meter"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:neumorph_shadowColorDark="#171717"
+        app:neumorph_shadowColorLight="#242124"
+        app:neumorph_shadowElevation="5dp"
+        app:neumorph_shapeType="flat">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <soup.neumorphism.NeumorphButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@color/black2"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="@color/black2"
+                android:text="m"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                app:neumorph_shadowColorDark="#171717"
+                app:neumorph_shadowColorLight="#242124"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shapeType="basin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meter"
+                android:textColor="@color/white"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/personnelNoTextInputLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidth="0dp">
+
+
+
+                <EditText
+                    android:id="@+id/meterEditText"
+                    android:inputType="number"
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded"
+                    android:padding="2dp"
+                    android:textDirection="rtl"
+                    android:textColor="@color/white"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginStart="10dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/foot"
+        android:layout_below="@id/meter"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        app:neumorph_shadowElevation="5dp"
+        app:neumorph_shadowColorDark="#171717"
+        app:neumorph_shadowColorLight="#242124"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:neumorph_shapeType="flat">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <soup.neumorphism.NeumorphButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:background="@color/black2"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="@color/black2"
+                android:text="ft"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                app:neumorph_shadowColorDark="#171717"
+                app:neumorph_shadowColorLight="#242124"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shapeType="basin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foot"
+                android:textColor="@color/white"/>
+
+
+                <TextView
+                    android:id="@+id/footTextView"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded"
+                    android:padding="2dp"
+                    android:textDirection="rtl"
+                    android:textColor="@color/white"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginStart="80dp"
+                    />
+
+
+
+
+        </LinearLayout>
+
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="400dp"
+        android:layout_height="365dp"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/black2"
+        android:outlineAmbientShadowColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button7"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:clickable="true"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button8"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button9"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button4"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:outlineAmbientShadowColor="@color/black2"
+                    android:text="4"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shapeType="flat" />
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button5"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:outlineAmbientShadowColor="@color/black2"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shapeType="flat" />
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button6"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:outlineAmbientShadowColor="@color/black2"
+                    android:text="6"
+                    android:textColor="@color/white"
+                    android:textSize="50sp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shapeType="flat" />
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/buttonRetry"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="."
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/retry" />
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button1"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:textColor="@color/white"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:textColor="@color/white"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button3"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    android:textColor="@color/white"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/clearButton"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="C"
+                    android:textColor="@color/red"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button00"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    android:textColor="@color/white"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/button0"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    android:textColor="@color/white"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2"/>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/buttonDot"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="."
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text="."
+                            android:textColor="@color/white"
+                            android:textSize="50sp" />
+
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/deleteButton"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:neumorph_shapeType="flat"
+                    android:background="@color/black2"
+                    android:gravity="center"
+                    android:text="."
+                    android:textSize="50sp"
+                    app:neumorph_shadowElevation="5dp"
+                    app:neumorph_shadowColorDark="#171717"
+                    app:neumorph_shadowColorLight="#242124"
+                    android:outlineAmbientShadowColor="@color/black2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/delete_svg" />
+                            
+
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+                
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>
