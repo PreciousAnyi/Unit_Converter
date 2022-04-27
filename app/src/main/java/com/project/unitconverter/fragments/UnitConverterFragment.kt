@@ -42,7 +42,7 @@ class UnitConverterFragment : Fragment(), OnClickListener {
         val button00 : NeumorphButton = view.findViewById(R.id.button00)
         val dotButton : NeumorphCardView = view.findViewById(R.id.buttonDot)
         val convertButton : NeumorphButton = view.findViewById(R.id.convertButton)
-        val clearButton : NeumorphCardView = view.findViewById(R.id.clear_button)
+        val clearButton : NeumorphCardView = view.findViewById(R.id.clearButton)
         val deleteButton : NeumorphCardView = view.findViewById(R.id.deleteButton)
 
         //assigning meterEditText and footTextView

@@ -255,11 +255,8 @@
                     app:neumorph_shadowElevation="5dp"
                     app:neumorph_shapeType="flat" />
                 <soup.neumorphism.NeumorphCardView
-<<<<<<< HEAD
-                    android:id="@+id/buttonRetry"
-=======
-                    android:id="@+id/clear_button"
->>>>>>> ebfb375 (Initial commit)
+                    android:id="@+id/clearButton"
+
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     app:neumorph_shapeType="flat"
@@ -340,11 +337,7 @@
                     app:neumorph_shadowColorLight="#242124"
                     android:outlineAmbientShadowColor="@color/black2"/>
                 <soup.neumorphism.NeumorphButton
-<<<<<<< HEAD
-                    android:id="@+id/clearButton"
-=======
                     android:id="@+id/convertButton"
->>>>>>> ebfb375 (Initial commit)
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     app:neumorph_shapeType="flat"
@@ -451,13 +444,13 @@
                             android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"
                             android:src="@drawable/delete_svg" />
-                            
+
 
 
                     </RelativeLayout>
 
                 </soup.neumorphism.NeumorphCardView>
-                
+
 
 
 
@@ -468,7 +461,10 @@
         </LinearLayout>
 
 
-    </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.card.MaterialCardView>
 
 
 </RelativeLayout>
+
+
